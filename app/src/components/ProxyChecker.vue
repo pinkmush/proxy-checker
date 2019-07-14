@@ -28,7 +28,7 @@
             >
         <span
                 class="subheading"
-                style="color:rgba(255,255,255,.86)"
+
         >
           In what format to add a proxy in a proxy-checker?<br><br> If you have public proxies (without login and password), then
           <span style="color: red">IP:PORT</span> <br><br> If you have private proxies (with authorization on login and the password), then
