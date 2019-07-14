@@ -343,8 +343,4 @@
     .application .theme--dark.v-table tbody tr:hover:not(.datatable__expand-row), .theme--dark .v-table tbody tr:hover:not(.datatable__expand-row) {
         background-color: #212121 !important;
     }
-
-    .white-link {
-        color: #fff;
-    }
 </style>
