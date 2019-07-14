@@ -10,7 +10,7 @@ echo json_encode($result);
 
 class ProxyChecker
 {
-    private $url = '/ping.php';
+    private $url = 'http://georgiy.pro/ping.php';
     private $ip;
     private $port;
     private $user;
