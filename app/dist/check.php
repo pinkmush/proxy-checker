@@ -29,11 +29,6 @@ class ProxyChecker
         $data = $this->request();
 
         if ($data['http_code'] && $data['http_code'] === 200) {
-
-
-            echo '<pre>';
-            var_dump($data);
-
             $countryName = $this->getCountryName();
             $result = [
                 'status' => 'ok',
@@ -45,7 +40,6 @@ class ProxyChecker
                     'response_time' => $data['total_time'] * 1000
                 ],
             ];
-
         } else {
             $result = [
                 'status' => 'error',
