@@ -10,7 +10,7 @@ echo json_encode($result);
 
 class ProxyChecker
 {
-    private $url = 'http://localhost:8080/ping.php';
+    private $url = '/ping.php';
     private $ip;
     private $port;
     private $user;
@@ -41,7 +41,7 @@ class ProxyChecker
                 'wait' => '0',
                 'data' => [
                     'country' => $countryName ? $countryName : '-',
-                    'ip' => '-',
+                    'ip' => $data['outgoing_ip'] ? $data['outgoing_ip'] : '-',
                     'response_time' => $data['total_time'] * 1000
                 ],
             ];
@@ -75,6 +75,7 @@ class ProxyChecker
         $content = curl_exec($ch);
         $data = curl_getinfo($ch);
         curl_close($ch);
+        $data['outgoing_ip'] = json_decode($content, true)['ip'] ?? null;
         return $data;
     }
 
