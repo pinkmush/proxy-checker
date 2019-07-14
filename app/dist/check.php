@@ -17,7 +17,7 @@ try {
 
 class ProxyChecker
 {
-    private $url = 'http://georgiy.pro/ping.php';
+    private $url = 'http://proxy.georgiy.pro/ping.php';
     private $ip;
     private $port;
     private $user;
