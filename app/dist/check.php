@@ -1,12 +1,19 @@
 <?php
 
+if (!isset($_GET['proxy'])) {
+    throw new InvalidArgumentException('Proxy is not provided');
+}
 
-$checker = new ProxyChecker('103.223.15.11', '3139', 'mic', 'michael');
-$result = $checker->check();
+try {
+    $proxy = explode(':', $_GET['proxy']);
+    $checker = new ProxyChecker($proxy[0], $proxy[1], $proxy[2] ?? null, $proxy[3] ?? null);
+    $result = $checker->check();
 
-header('Content-Type: application/json');
-echo json_encode($result);
-
+    header('Content-Type: application/json');
+    echo json_encode($result);
+} catch (Exception $exception) {
+    echo 'Error';
+}
 
 class ProxyChecker
 {
