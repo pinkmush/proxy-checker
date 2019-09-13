@@ -1,4 +1,4 @@
-# Proxy Checker by [Georgiy Baranov](https://www.upwork.com/freelancers/~01e16b15fde86cc973)
+# Proxy Checker by [Georgiy Baranov]
 
 ##Install
 * cp laradock/env-example laradock/.env
