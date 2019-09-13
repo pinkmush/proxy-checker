@@ -1,5 +1,4 @@
-# Proxy Checker by [Georgiy Baranov]
-
+# Proxy Checker
 ##Install
 * cp laradock/env-example laradock/.env
 * cp laradock/nginx/sites/default.conf.example laradock/nginx/sites/default.conf
