@@ -8,4 +8,4 @@
 
 
 ## Additional info
-* if domain != proxy.georgiy.pro, then change app/dist/check.php
+* set up the app/dist/check.php
